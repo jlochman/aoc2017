@@ -2,7 +2,7 @@ package cz.jlochman.aoc2017.day03;
 
 public class Day03a {
 
-   private final static int INPUT = 349975000;
+   private final static int INPUT = 349975;
    private static Direction direction;
 
    public static void main(String[] args) {
