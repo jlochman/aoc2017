@@ -25,32 +25,32 @@ public class Day08 {
             int change = line.nextInt() * multiplier;
 
             line.next();
-            String condRegister = line.next();
-            if (!regs.containsKey(condRegister)) {
-               regs.put(condRegister, 0);
+            String condReg = line.next();
+            if (!regs.containsKey(condReg)) {
+               regs.put(condReg, 0);
             }
-            String condition = line.next();
+            String cond = line.next();
             int condValue = line.nextInt();
 
-            if (condition.equals(">") && regs.get(condRegister) > condValue) {
+            if (cond.equals(">") && regs.get(condReg) > condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
-            } else if (condition.equals("<")
-                       && regs.get(condRegister) < condValue) {
+            } else if (cond.equals("<")
+                       && regs.get(condReg) < condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
-            } else if (condition.equals(">=")
-                       && regs.get(condRegister) >= condValue) {
+            } else if (cond.equals(">=")
+                       && regs.get(condReg) >= condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
-            } else if (condition.equals("<=")
-                       && regs.get(condRegister) <= condValue) {
+            } else if (cond.equals("<=")
+                       && regs.get(condReg) <= condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
-            } else if (condition.equals("==")
-                       && regs.get(condRegister) == condValue) {
+            } else if (cond.equals("==")
+                       && regs.get(condReg) == condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
-            } else if (condition.equals("!=")
-                       && regs.get(condRegister) != condValue) {
+            } else if (cond.equals("!=")
+                       && regs.get(condReg) != condValue) {
                regs.put(targetReg, regs.get(targetReg) + change);
             } else {
-               System.err.println("Unhandled: " + condition);
+               System.err.println("Unhandled: " + cond);
             }
             line.close();
 
