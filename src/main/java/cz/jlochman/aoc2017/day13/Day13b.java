@@ -25,7 +25,6 @@ public class Day13b {
                   .forEach(layer -> layer.tick());
          }
          System.out.println(delay);
-
       }
    }
 

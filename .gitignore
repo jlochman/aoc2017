@@ -16,7 +16,6 @@ export/
 reports/
 logs/
 report.html
-*.txt
 properties/pom.properties
 
 # Eclipse Core

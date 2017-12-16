@@ -53,7 +53,7 @@ public class Layer {
          }
       }
    }
-   
+
    public void reset() {
       index = 0;
       inc = true;
@@ -63,11 +63,8 @@ public class Layer {
       return index;
    }
 
-   
    public boolean isInc() {
       return inc;
    }
-   
-   
 
 }

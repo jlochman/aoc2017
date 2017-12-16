@@ -1,10 +1,10 @@
 package cz.jlochman.aoc2017.day16;
 
-public interface Worker {
+interface Worker {
 
    void work();
 
-   public class Spinner implements Worker {
+   class Spinner implements Worker {
 
       private int spinBy;
 
@@ -24,7 +24,7 @@ public interface Worker {
 
    }
 
-   public class Exchanger implements Worker {
+   class Exchanger implements Worker {
 
       private int p1;
       private int p2;
@@ -43,7 +43,7 @@ public interface Worker {
 
    }
 
-   public class Partner implements Worker {
+   class Partner implements Worker {
 
       private char ch1;
       private char ch2;

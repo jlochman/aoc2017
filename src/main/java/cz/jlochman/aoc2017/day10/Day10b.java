@@ -11,10 +11,10 @@ import com.google.common.primitives.Bytes;
 public class Day10b {
 
    public static void main(String[] args) throws UnsupportedEncodingException {
-      resolve("230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167");
+      System.out.println(resolve("230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167"));
    }
 
-   private static void resolve(String s) throws UnsupportedEncodingException {
+   public static String resolve(String s) throws UnsupportedEncodingException {
       byte[] inputBytes = s.getBytes("ASCII");
       byte[] appendBytes = new byte[] { 17, 31, 73, 47, 23 };
       byte[] input = Bytes.concat(inputBytes, appendBytes);
@@ -48,9 +48,9 @@ public class Day10b {
          xors.add(xor);
       }
 
-      System.out.println(xors.stream()
-                             .map(xor -> String.format("%02x", xor))
-                             .collect(Collectors.joining("")));
+      return xors.stream()
+                 .map(xor -> String.format("%02x", xor))
+                 .collect(Collectors.joining(""));
 
    }
 
