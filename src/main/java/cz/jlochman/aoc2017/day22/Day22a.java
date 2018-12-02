@@ -6,7 +6,7 @@ import java.util.Set;
 
 import cz.jlochman.aoc2017.utils.FileUtils;
 
-public class Day22 {
+public class Day22a {
 
    public static void main(String[] args) {
       try (Scanner in = FileUtils.getScanner("Day22/input.txt")) {
